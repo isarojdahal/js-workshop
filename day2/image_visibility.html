@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="image.jpeg"
+      id="image"
+      height="200"
+      width="200"
+      style="display: block"
+    />
+    <button id="mybutton">Toggle</button>
+  </body>
+
+  <script>
+    var button = document.getElementById("mybutton");
+    var image = document.getElementById("image");
+    var state = image.style.display;
+
+    button.addEventListener("click", () => {
+      console.log(state);
+      if (state == "block") {
+        image.style.display = "none";
+        state = "none";
+      } else if (state == "none") {
+        image.style.display = "block";
+        state = "block";
+      }
+    });
+  </script>
+</html>
