@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="fetchData()">Fetch</button>
+    <button onclick="fetchData()">Like</button>
+  </body>
+
+  <script>
+    function fetchData() {
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
+
+    function sendData() {
+      fetch("https://jsonplaceholder.typicode.com/users/v1/like?token=")
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
+  </script>
+</html>
